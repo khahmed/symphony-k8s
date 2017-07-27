@@ -1,0 +1,15 @@
+description: Spectrum Symphony 7.2
+home: https://www.ibm.com/support/knowledgecenter/SSZU2E/product_welcome_conductorspark.html
+icon: http://platform.csdn.net/images/pro_02.gif
+keywords:
+- symphony
+- cluster
+- job
+- distributed
+maintainers:
+- email: khalida@ca.ibm.com
+  name: Khalid Ahmed
+name: spectrum-symphony
+sources:
+- https://hub.docker.com/r/huxl/condutor-spark/
+version: "7.2"

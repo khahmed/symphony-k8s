@@ -1,0 +1,51 @@
+#!/bin/sh
+SYM_TOP=/opt/ibm/spectrumcomputing
+# Our scripts use uname -a to figure out the platform they are running on. Docker doesn't virtualize that so it reports the 
+# host OS. If the host OS is Ubuntu and Sym container is CentOS scripts get confused
+source $SYM_TOP/kernel/conf/profile.ego
+export PERF_WORKDIR=/opt/ibm/spectrumcomputing/kernel/conf/../../perf/work
+export MANPATH=/opt/ibm/spectrumcomputing/3.6/man:
+export EGO_CONFDIR=/opt/ibm/spectrumcomputing/kernel/conf
+export SOAM_BINDIR=/opt/ibm/spectrumcomputing/soam/7.2/linux-x86_64/bin
+export EGO_TOP=/opt/ibm/spectrumcomputing
+export PERF_LIB_TYPE=linux-x86_64
+export MRSH_BUILD_NO=0
+export EGO_VERSION=3.6
+export PI_LOGDIR=/opt/ibm/spectrumcomputing/perf/logs
+export EGO_SERVERDIR=/opt/ibm/spectrumcomputing/3.6/linux-x86_64/etc
+export PI_CONFDIR=/opt/ibm/spectrumcomputing/kernel/conf/../../perf/conf
+export OS_TYPE=linux-x86_64
+export SOAM_BINARY_TYPE=linux-x86_64
+export EGO_MACHINE_TYPE=linux-x86_64
+export PERF_ENV=-DPERF_TOP=/opt/ibm/spectrumcomputing/perf -DPERF_CONFDIR=/opt/ibm/spectrumcomputing/kernel/conf/../../perf/conf -DPERF_WORKDIR=/opt/ibm/spectrumcomputing/kernel/conf/../../perf/work -DPERF_LOGDIR=/opt/ibm/spectrumcomputing/perf/logs -DPERF_DATADIR=/opt/ibm/spectrumcomputing/perf/data
+export LD_LIBRARY_PATH=/opt/ibm/spectrumcomputing/soam/mapreduce/7.2/linux-x86_64/lib64:/opt/ibm/spectrumcomputing/soam/mapreduce/7.2/linux-x86_64/lib:/opt/ibm/spectrumcomputing/soam/7.2/linux-x86_64/lib64:/opt/ibm/spectrumcomputing/soam/7.2/linux-x86_64/lib:/opt/ibm/spectrumcomputing/integration/yarn/3.6/linux-x86_64/lib/:/opt/ibm/spectrumcomputing/perf/ego/3.6/linux-x86_64/lib:/opt/ibm/spectrumcomputing/perf/soam/7.2/linux-x86_64/lib:@SOAM_LIBDIR@:/opt/ibm/spectrumcomputing/3.6/linux-x86_64/lib:/opt/ibm/spectrumcomputing/3.6/linux-x86_64/lib/jni
+export PI_ROOT=/opt/ibm/spectrumcomputing/perf
+export EGO_LIBDIR=/opt/ibm/spectrumcomputing/3.6/linux-x86_64/lib
+export LIBPATH=/opt/ibm/spectrumcomputing/soam/7.2/linux-x86_64/lib64:/opt/ibm/spectrumcomputing/soam/7.2/linux-x86_64/lib:/opt/ibm/spectrumcomputing/integration/yarn/3.6/linux-x86_64/lib/:/opt/ibm/spectrumcomputing/perf/ego/3.6/linux-x86_64/lib:/opt/ibm/spectrumcomputing/perf/soam/7.2/linux-x86_64/lib:@SOAM_LIBDIR@:/opt/ibm/spectrumcomputing/3.6/linux-x86_64/lib:/opt/ibm/spectrumcomputing/3.6/linux-x86_64/lib/jni
+export BINARY_TYPE=linux-x86_64
+export EGOJRE_VERSION=8.0.3.21
+export PERF_TOP=/opt/ibm/spectrumcomputing/perf
+export PATH=/opt/ibm/spectrumcomputing/soam/mapreduce/7.2/linux-x86_64/bin:/bin:/jre/bin:/usr/bin:/usr/local/bin:/local/bin:/sbin:/usr/sbin:/usr/ucb:/usr/bsd:/opt/ibm/spectrumcomputing/soam/7.2/linux-x86_64/bin:/opt/ibm/spectrumcomputing/soam/7.2/linux-x86_64/etc:/opt/ibm/spectrumcomputing/integration/yarn/3.6/bin:/opt/ibm/spectrumcomputing/perf/3.6/bin:/opt/ibm/spectrumcomputing/3.6/linux-x86_64/etc:/opt/ibm/spectrumcomputing/3.6/linux-x86_64/bin:/usr/local/sbin
+export PMR_SERVERDIR=/opt/ibm/spectrumcomputing/soam/mapreduce/7.2/linux-x86_64/etc
+export SOAM_HOME=/opt/ibm/spectrumcomputing/soam
+export PERF_LOGDIR=/opt/ibm/spectrumcomputing/perf/logs
+export SOAM_VERSION=7.2
+export PERF_LIB=/opt/ibm/spectrumcomputing/perf/ego/3.6/linux-x86_64/lib:/opt/ibm/spectrumcomputing/perf/soam/7.2/linux-x86_64/lib
+export PWD=/
+export JAVA_HOME=
+export PERF_ETCDIR=/opt/ibm/spectrumcomputing/perf/3.6/etc
+export SOAM_SERVERDIR=/opt/ibm/spectrumcomputing/soam/7.2/linux-x86_64/etc
+export PERF_VERSION=3.6
+export EGOYARN_HOME=/opt/ibm/spectrumcomputing/integration/yarn
+export EGOYARN_SERVERDIR=/opt/ibm/spectrumcomputing/integration/yarn/3.6/etc
+export EGOYARN_VERSION=3.6
+export PERF_DATADIR=/opt/ibm/spectrumcomputing/perf/data
+export EGO_LOCAL_CONFDIR=/opt/ibm/spectrumcomputing/kernel/conf
+export PMR_VERSION=7.2
+export PI_TOP=/opt/ibm/spectrumcomputing/perf
+export LICENSE_FILE=/opt/ibm/spectrumcomputing/kernel/conf/../../perf/conf/license.dat
+export EGO_ESRVDIR=/opt/ibm/spectrumcomputing/eservice
+export PMR_BINDIR=/opt/ibm/spectrumcomputing/soam/mapreduce/7.2/linux-x86_64/bin
+export PI_WORKDIR=/opt/ibm/spectrumcomputing/kernel/conf/../../perf/work
+export PMR_HOME=/opt/ibm/spectrumcomputing/soam/mapreduce
+export EGO_BINDIR=/opt/ibm/spectrumcomputing/3.6/linux-x86_64/bin
