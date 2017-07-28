@@ -13,7 +13,7 @@ ENV SYM_INSTALL_PKG symeval-7.2.0.0_x86_64.bin
 RUN useradd egoadmin
 RUN yum install -y gettext net-tools gawk which sudo tar wget
 
-RUN cd /;wget --quiet --no-proxy http://9.21.58.21:9191/${SYM_INSTALL_PKG};chmod 755 /${SYM_INSTALL_PKG};/${SYM_INSTALL_PKG} --quiet; rm -f /${SYM_INSTALL_PKG}
+RUN cd /;wget --quiet --no-proxy http://9.21.58.23:9191/${SYM_INSTALL_PKG};chmod 755 /${SYM_INSTALL_PKG};/${SYM_INSTALL_PKG} --quiet; rm -f /${SYM_INSTALL_PKG}
 
 COPY bootstrap.sh /bootstrap.sh
 COPY profile.ego /profile.ego
