@@ -1,5 +1,5 @@
 # Build: docker build -t spectrum-symphony:7.2 .
-FROM multiarch/centos:latest
+FROM centos7:latest
 MAINTAINER Joe Smith <jsmith@example.com>
 
 ENV CLUSTERADMIN egoadmin
@@ -8,7 +8,7 @@ ENV BASEPORT 17869
 ENV DISABLESSL Y
 ENV SIMPLIFIEDWEM N
 ENV LANG en_CA.UTF-8
-ENV SYM_INSTALL_PKG symeval-7.2.0.0_ppc64le.bin 
+ENV SYM_INSTALL_PKG symeval-7.2.0.0_x86_64.bin 
 
 RUN useradd egoadmin
 RUN yum install -y gettext net-tools gawk which sudo tar wget
