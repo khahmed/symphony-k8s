@@ -10,21 +10,8 @@ ENV SIMPLIFIEDWEM N
 ENV LANG en_CA.UTF-8
 ENV SYM_INSTALL_PKG symeval-7.2.0.0_ppc64le.bin 
 
-RUN  yum -y -q install ed \
-                       tar \
-                       vi \
-                       initscripts \
-                       lsof \
-                       sysstat \
-                       net-tools \
-                       which \
-                       gettext \
-                       mysql \
-                       openssh-server \
-                       openssh-clients \
-                       wget 
 
-RUN useradd -s /bin/bash -m egoadmin
+RUN /usr/sbin/useradd -s /bin/bash -m egoadmin
 RUN yum install -y gettext net-tools gawk which sudo tar wget
 
 RUN cd /;wget --quiet --no-proxy http://169.45.172.107:9191/${SYM_INSTALL_PKG};chmod 755 /${SYM_INSTALL_PKG};/${SYM_INSTALL_PKG} --quiet; rm -f /${SYM_INSTALL_PKG}
