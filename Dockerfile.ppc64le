@@ -1,5 +1,5 @@
 # Build: docker build -t spectrum-symphony:7.2 .
-FROM jjacobso/centos-ppc64le 
+FROM jjacobso/centos-ppc64le:7.2
 MAINTAINER Joe Smith <jsmith@example.com>
 
 ENV CLUSTERADMIN root
