@@ -1,5 +1,5 @@
 # Build: docker build -t spectrum-symphony:7.2 .
-FROM centos7:latest
+FROM centos:7.2.1511
 MAINTAINER Joe Smith <jsmith@example.com>
 
 ENV CLUSTERADMIN egoadmin

@@ -9,7 +9,7 @@ master:
   master: icp-worker1
   pvc: symphony
   image:
-    repository: master.cfc:8500/admin/spectrum-symphony
+    repository: master.cfc:8500/default/spectrum-symphony
     tag: 7.2
 
 slave:
@@ -21,7 +21,7 @@ slave:
   targetCPUUtilizationPercentage: 50
   pvc: symphony
   image:
-    repository: master.cfc:8500/admin/spectrum-symphony
+    repository: master.cfc:8500/default/spectrum-symphony
     tag: 7.2
 
 license:
