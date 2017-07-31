@@ -1,7 +1,7 @@
 #!/bin/sh
-SYM_TOP=/opt/ibm/spectrumcomputing
-CLUSTERADMIN=egoadmin
-HOSTNAME=`hostname`
+export SYM_TOP=/opt/ibm/spectrumcomputing
+export CLUSTERADMIN=egoadmin
+export HOSTNAME=`hostname`
 
 /bin/su -c "source $SYM_TOP/profile.platform; egoconfig join $MASTERNAME -f" egoadmin
 if [ "$MASTERNAME" == `hostname` ]; then
