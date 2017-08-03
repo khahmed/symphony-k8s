@@ -1,0 +1,10 @@
+image: master.cfc:8500/default/spectrum-symphony-multi:7.2
+manifests:
+  - image: master.cfc:8500/default/spectrum-symphony-x86:7.2 
+    platform:
+      architecture: amd64
+      os: linux
+  - image: master.cfc:8500/default/spectrum-symphony-ppc64le:7.2  
+    platform:
+      architecture: ppc64le
+      os: linux
