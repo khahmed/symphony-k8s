@@ -21,16 +21,18 @@ Parameters
 
 | Value                     | Description                                   | Default          |
 |---------------------------|-----------------------------------------------|------------------|
-| master.image.repository   | The image to use for this deployment          | master.cfc:8500/default/spectrum-symphony |
-| master.image.tag          | The image tag to use for this deployment      | 7.2 |
+| cluster.image.repository   | The image to use for this deployment          | master.cfc:8500/default/spectrum-symphony |
+| cluster.image.tag          | The image tag to use for this deployment      | 7.2 |
+| cluster.master             | Master name of the Symphony master | icp-worker1 |
+| cluster.pvc                | Master shared storage | symphony |
 | master.cpu                | Master container CPU limit      | 1000 |
-| master.memory             | Master container memory limit      | 3048Mb |
-| master.pvc                |     Master shared storage | symphony |
-| slave.image.repository          | The image to use for this deployment          | master.cfc:8500/default/spectrum-symphony |
-| slave.image.tag                 | The image tag to use for this deployment      | 7.2 |
+| master.memory             | Master container memory limit      | 4096Mb |
 | slave.cpu                 | Slave container CPU limit      | 1000 |
-| slave.memory              | Slave container memory limit      | 3048Mb |
-| slave.pvc                 |    Slave shared storage | symphony |
+| slave.memory              | Slave container memory limit      | 2048Mb |
+| slave.minReplicas         | Minimum number of replicas     | 1|
+| slave.maxReplicas         | Maximum  number of replicas     | 1|
+| slave.maxReplicasForAs   |  Maximum number of replicas for auto-scaling policy  | 1|
+| slave.targetCPUUtilizationPercentage| Target CPU utilization of worker containers to trigger auto-scale   | 50|
 | license.key1              | License feature for ego_base     | n/a |
 | license.key2              | License feature for sym_adv_entitlement     | n/a |
 

@@ -12,11 +12,11 @@ cluster:
 
 master:
   cpu: 1000m
-  memory: 2048Mi
+  memory: 4096Mb
 
 slave:
   cpu: 1000m
-  memory: 2048Mi
+  memory: 2048Mb
   minReplicas: 1
   maxReplicas: 1
   maxReplicasForAs: 1 

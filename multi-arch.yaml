@@ -1,4 +1,4 @@
-image: master.cfc:8500/default/spectrum-symphony-multi:7.2
+image: master.cfc:8500/default/spectrum-symphony:7.2
 manifests:
   - image: master.cfc:8500/default/spectrum-symphony-x86:7.2 
     platform:
