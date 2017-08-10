@@ -7,4 +7,5 @@ This project contains artifacts to deploy IBM Spectrum Symphony on Kubernetes. T
 - bootstrap.sh: Start up script for Dockerfile
 - spectrum-symphony: Directory containing helm charts for deploying Spectrum Symphony. This can be loaded into ICp App center to enable 
 users
+- multi-arch.yaml: Multi-arch YAML for creating a single meta image for x86 and ppc64le platforms
 
