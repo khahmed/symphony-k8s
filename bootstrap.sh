@@ -14,8 +14,6 @@ if [ "$MASTERNAME" == `hostname` ]; then
     /bin/su -c "source $SYM_TOP/profile.platform; egoconfig mghost /shared -f; source $SYM_TOP/profile.platform; egoconfig setentitlement /tmp/license.dat" egoadmin
 fi
 
-# Our scripts use uname -a to figure out the platform they are running on. Docker doesn't virtualize that so it reports the 
-# host OS. If the host OS is Ubuntu and Sym container is CentOS scripts get confused
 source $SYM_TOP/profile.platform
 
 chown  $CLUSTERADMIN $SYM_TOP/kernel/work 

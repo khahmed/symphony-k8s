@@ -53,9 +53,11 @@ kubectl label --overwrite  node 9.21.58.33  deploy_sym_master="false"
 You can use the  ICp App Center to deploy a Symphony cluster including master and workers using the deployment wizard
 to enter the values. Alternatively use the helm CLI
 
-helm install --name symphony  --set cluster.master=master-node --set cluster.pvc=symphony2 repo/spectrum-symphony
+~~~
+helm install --name symphony  --set cluster.master=master-node --set cluster.pvc=symphony repo/spectrum-symphony
+~~~
 
-The following parameters can be modified with the --set command
+The following parameters can be modified with the --set option
 
 Parameters
 ----------
