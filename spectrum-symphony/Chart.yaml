@@ -11,5 +11,5 @@ maintainers:
   name: Khalid Ahmed
 name: spectrum-symphony
 sources:
-- https://hub.docker.com/r/huxl/condutor-spark/
+- https://github.com/khahmed/symphony-k8s/tree/master/spectrum-symphony
 version: "7.2"
