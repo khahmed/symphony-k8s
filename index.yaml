@@ -18,6 +18,6 @@ entries:
     sources:
     - https://github.com/khahmed/symphony-k8s/tree/master/spectrum-symphony
     urls:
-    - spectrum-symphony-7.2.tgz
+    - https://raw.githubusercontent.com/khahmed/symphony-k8s/master/spectrum-symphony-7.2.tgz
     version: "7.2"
 generated: 2017-08-25T15:39:59.637289489-04:00
