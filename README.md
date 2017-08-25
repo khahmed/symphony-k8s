@@ -20,7 +20,7 @@ modify the Dockerfile to point to it. You can build the Docker image from the co
 docker build -t spectrum-symphony:7.2 .
 ```
 
-Alternative you can use the default Jenkins service that appears in the IBM Cloud private App Center to build the Symphony image.  Create a Jenkins job and add a buld step with the following shell command:
+Alternatively you can use the default Jenkins service that appears in the IBM Cloud private App Center to build the Symphony image.  Fork this repo and modify the IP aaddress to the web server for the Symphony distribution. Crate a Jenkins job and point the Git repo  to it ,  and add a buld step with the following shell command:
 
 
 ```
