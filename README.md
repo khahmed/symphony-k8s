@@ -14,7 +14,7 @@ Build Docker Image
 ------------------
 
 The Dockerfile expects the Symphony distribution to downloaded from a specifc IP address. Put the Symphony distribution on a web server and 
-modify the Dockerfile to point to it. You can build the Docker image from the command-line:
+modify the Dockerfile changing the $repo_url variable to point to it. You can build the Docker image from the command-line:
 
 ```
 docker build -t spectrum-symphony:7.2 .

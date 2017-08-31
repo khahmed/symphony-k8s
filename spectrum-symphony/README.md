@@ -17,6 +17,10 @@ charts, though there are some that are not exposed there.
 Quick Start
 -----------
 
+0. Build Symphony Image
+
+The chart assumes that the Symphony image is built and is available in a Docker registry. See https://github.com/khahmed/symphony-k8s
+
 1. Create a Persistent Volume
 
 
@@ -54,8 +58,11 @@ You can use the  ICp App Center to deploy a Symphony cluster including master an
 to enter the values. Alternatively use the helm CLI
 
 ~~~
-helm install --name symphony  --set cluster.master=master-node --set cluster.pvc=symphony repo/spectrum-symphony
+helm repo add symphony https://raw.githubusercontent.com/khahmed/symphony-k8s/master/
+helm install --name symphony  --set cluster.master=master-node --set cluster.pvc=symphony --set cluster.image.repository=master.cfc:8500/default/spectrum-symphony --set cluster.image.tag=7.2 --set license.key1=<license key 1> --set license.key2=<license key 2> symphony/spectrum-symphony
 ~~~
+
+NOTE: You need to obtain a license for Symphony 
 
 The following parameters can be modified with the --set option
 
