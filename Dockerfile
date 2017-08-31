@@ -9,11 +9,12 @@ ENV DISABLESSL Y
 ENV SIMPLIFIEDWEM N
 ENV LANG en_CA.UTF-8
 ENV SYM_INSTALL_PKG symeval-7.2.0.0_x86_64.bin 
+ENV REPO_URL=$repo_url
 
 RUN useradd egoadmin
 RUN yum install -y gettext net-tools gawk which sudo tar wget
 
-RUN cd /;wget --quiet --no-proxy http://9.21.58.23:9191/${SYM_INSTALL_PKG};chmod 755 /${SYM_INSTALL_PKG};/${SYM_INSTALL_PKG} --quiet; rm -f /${SYM_INSTALL_PKG}
+RUN cd /;wget --quiet --no-proxy ${REPO_URL}/${SYM_INSTALL_PKG};chmod 755 /${SYM_INSTALL_PKG};/${SYM_INSTALL_PKG} --quiet; rm -f /${SYM_INSTALL_PKG}
 
 COPY bootstrap.sh /bootstrap.sh
 RUN chmod 755 /bootstrap.sh
