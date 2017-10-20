@@ -1,9 +1,9 @@
 apiVersion: v1
 entries:
   spectrum-symphony:
-  - created: 2017-08-25T15:39:59.639724109-04:00
+  - created: 2017-10-20T10:14:21.142467721-04:00
     description: Spectrum Symphony 7.2
-    digest: fd190d7ea52d48ee14c35a9f41abf162338c19702d81aef458c5d9bdbc41fa68
+    digest: 1553c28f1a9bd0f0b3d5039b55fb5bebf9a874aa1b07c130205edb08b730fbf7
     home: https://www.ibm.com/support/knowledgecenter/SSZUMP/product_welcome_spectrum_symphony.html
     icon: http://platform.csdn.net/images/pro_02.gif
     keywords:
@@ -17,7 +17,8 @@ entries:
     name: spectrum-symphony
     sources:
     - https://github.com/khahmed/symphony-k8s/tree/master/spectrum-symphony
+    tillerVersion: '>=2.4.0'
     urls:
-    - https://raw.githubusercontent.com/khahmed/symphony-k8s/master/spectrum-symphony-7.2.tgz
-    version: "7.2"
-generated: 2017-08-25T15:39:59.637289489-04:00
+    - https://raw.githubusercontent.com/khahmed/symphony-k8s/master/spectrum-symphony-7.2.0.tgz
+    version: 7.2.0
+generated: 2017-10-20T10:14:21.136405877-04:00
