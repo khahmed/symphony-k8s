@@ -18,10 +18,9 @@ slave:
   cpu: 1000m
   memory: 2048Mi
   minReplicas: 1
-  maxReplicas: 1
   maxReplicasForAs: 1 
   targetCPUUtilizationPercentage: 50
 
-license:
+symlicense:
   key1: "enter license key"
   key2: "enter license key"

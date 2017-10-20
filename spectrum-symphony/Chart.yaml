@@ -1,6 +1,7 @@
 description: Spectrum Symphony 7.2
 home: https://www.ibm.com/support/knowledgecenter/SSZUMP/product_welcome_spectrum_symphony.html
 icon: http://platform.csdn.net/images/pro_02.gif
+tillerVersion: ">=2.4.0"
 keywords:
 - symphony
 - cluster
@@ -12,4 +13,4 @@ maintainers:
 name: spectrum-symphony
 sources:
 - https://github.com/khahmed/symphony-k8s/tree/master/spectrum-symphony
-version: "7.2"
+version: "7.2.0"

@@ -2,16 +2,24 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: "{{ .Release.Name}}-license"
+  labels:
+    app: "{{ .Release.Name }}" 
+    chart: "{{.Chart.Name}}-{{.Chart.Version}}"
+    release: {{ .Release.Name | quote }}
+    heritage: {{ .Release.Service | quote }}
 data:
-  key1.dat:  {{ .Values.license.key1 }}
-  key2.dat:  {{ .Values.license.key2 }}
+  key1.dat:  {{ .Values.symlicense.key1 }}
+  key2.dat:  {{ .Values.symlicense.key2 }}
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: "{{ .Values.cluster.pvc }}"
   labels:
-    app: spectrum-symphony
+    app: "{{ .Release.Name }}" 
+    chart: "{{.Chart.Name}}-{{.Chart.Version}}"
+    release: {{ .Release.Name | quote }}
+    heritage: {{ .Release.Service | quote }}
 spec:
   accessModes:
     - ReadWriteMany
@@ -132,6 +140,11 @@ apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
   name: "{{ .Release.Name }}" 
+  labels:
+    app: "{{ .Release.Name }}" 
+    chart: "{{.Chart.Name}}-{{.Chart.Version}}"
+    release: {{ .Release.Name | quote }}
+    heritage: {{ .Release.Service | quote }}
 spec:
   scaleTargetRef:
     apiVersion: extensions/v1beta1

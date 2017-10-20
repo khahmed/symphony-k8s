@@ -55,11 +55,11 @@ kubectl label --overwrite  node 9.21.58.33  deploy_sym_master="false"
 3. Install the chart
 
 You can use the  ICp App Center to deploy a Symphony cluster including master and workers using the deployment wizard
-to enter the values. Alternatively use the helm CLI
+to enter the values. Alternatively use the helm CLI:
 
 ~~~
 helm repo add symphony https://raw.githubusercontent.com/khahmed/symphony-k8s/master/
-helm install --name symphony  --set cluster.master=master-node --set cluster.pvc=symphony --set cluster.image.repository=master.cfc:8500/default/spectrum-symphony --set cluster.image.tag=7.2 --set license.key1=<license key 1> --set license.key2=<license key 2> symphony/spectrum-symphony
+helm install --name symphony  --set cluster.master=master-node --set cluster.pvc=symphony --set cluster.image.repository=master.cfc:8500/default/spectrum-symphony --set cluster.image.tag=7.2 --set license.key1="license key 1" --set license.key2="license key 2" symphony/spectrum-symphony
 ~~~
 
 NOTE: You need to obtain a license for Symphony 

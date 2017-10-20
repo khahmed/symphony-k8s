@@ -8,8 +8,8 @@ ENV BASEPORT 17869
 ENV DISABLESSL Y
 ENV SIMPLIFIEDWEM N
 ENV LANG en_CA.UTF-8
-ENV SYM_INSTALL_PKG symeval-7.2.0.0_x86_64.bin 
-ENV REPO_URL=$repo_url
+ENV SYM_INSTALL_PKG sym-7.2.0.0_x86_64.bin 
+ENV REPO_URL=http://158.85.106.44/export/symphony/7.2.0.0/
 
 RUN useradd egoadmin
 RUN yum install -y gettext net-tools gawk which sudo tar wget
