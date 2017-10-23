@@ -7,7 +7,7 @@ cluster:
   master: icp-worker1
   pvc: symphony
   image:
-    repository: master.cfc:8500/default/spectrum-symphony
+    repository: mycluster.icp:8500/default/spectrum-symphony
     tag: 7.2
 
 master:
